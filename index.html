@@ -17,7 +17,7 @@
   </head>
   <body class="bg-black text-white">
     <div class="flex container m-auto">
-      <div class="first w-full h-full">
+      <div class="first w-3/6 h-full">
         <div class="logo invert mb-5">
           <svg
             viewBox="0 0 24 24"
@@ -32,7 +32,7 @@
           </svg>
         </div>
         <div class="sidebar">
-          <ul class="flex flex-col gap-2">
+          <ul class="flex flex-col gap-1">
             <li
               class="inline-flex hover:cursor-pointer gap-5 max-w-max hover:bg-gray-900 py-2 pr-6 pl-2 hover:rounded-full"
             >
@@ -134,16 +134,64 @@
             </li>
             <li>
               <button
-                class="bg-blue-400 block w-64 p-3 rounded-full font-semibold text-xl mt-1"
+                class="bg-blue-400 block w-56 p-3 rounded-full font-semibold text-xl mt-1"
               >
                 Post
               </button>
             </li>
           </ul>
         </div>
+        <div class="mt-10 ml-5 flex space-x-4 hover:cursor-pointer mr-5">
+          <div class="rounded-full overflow-hidden h-10 w-10 self-center">
+            <img src="./Assets/shree-ram-ayodhya-photo-hd1.jpeg" alt="" />
+          </div>
+          <div class="align-top">
+            <p class="font-semibold">Gajanan Bodhankar</p>
+            <p class="font-extralight text-gray-400">@GajananBodhank4</p>
+          </div>
+          <span class="material-symbols-outlined self-center">
+            more_horiz
+          </span>
+        </div>
       </div>
       <div class="second w-full border-gray-700 border-x-[0.1px]">b</div>
-      <div class="third w-full bg-slate-950">c</div>
+      <div class="third w-4/6">
+        <div class="ml-5 mt-2 w-80">
+          <div
+            id="one"
+            class="bg-gray-900 inline-flex justify-start rounded-full w-full border-white pl-2"
+          >
+            <svg
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              class="w-6 h-6 self-center"
+            >
+              <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
+            <input
+              type="text"
+              class="py-3 text-sm text-white rounded-full pl-4 bg-gray-900 focus:outline-none"
+              placeholder="Search"
+            />
+          </div>
+        </div>
+      </div>
     </div>
+    <script>
+      let element = document.getElementById("one");
+      let svg = document.querySelector("#one>svg");
+      element.addEventListener("focusin", () => {
+        element.style.border = "1px solid #60a5fa";
+        svg.classList.toggle("text-blue-400");
+      });
+      element.addEventListener("focusout", () => {
+        element.style.border = "1px solid black";
+        svg.classList.toggle("text-blue-400");
+      });
+    </script>
   </body>
 </html>
