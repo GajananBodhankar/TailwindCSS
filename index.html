@@ -156,10 +156,11 @@
       </div>
       <div class="second w-full border-gray-700 border-x-[0.1px]">b</div>
       <div class="third w-4/6">
-        <div class="ml-5 mt-2 w-80">
+        <div class="ml-5 mt-2 w-80 space-y-4">
           <div
             id="one"
-            class="bg-gray-900 inline-flex justify-start rounded-full w-full border-white pl-2"
+            class="bg-gray-900 inline-flex justify-start rounded-full w-full pl-4"
+            style="border: 1px solid black"
           >
             <svg
               fill="none"
@@ -170,27 +171,38 @@
               viewBox="0 0 24 24"
               class="w-6 h-6 self-center"
             >
-              <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+              <path
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                id="searchIcon"
+                style="color: grey"
+              ></path>
             </svg>
             <input
               type="text"
-              class="py-3 text-sm text-white rounded-full pl-4 bg-gray-900 focus:outline-none"
+              class="py-3 text-sm placeholder:text-gray-500 w-full rounded-full pl-4 bg-gray-900 focus:outline-none"
               placeholder="Search"
             />
+          </div>
+          <div class="bg-gray-900 py-3 px-4 rounded-2xl">
+            <div class="font-bold text-xl">Subscribe to Premium</div>
+            <div class="mt-2">
+              Subscribe to unlock new features and if eligible, receive a share
+              of ads revenue.
+            </div>
           </div>
         </div>
       </div>
     </div>
     <script>
       let element = document.getElementById("one");
-      let svg = document.querySelector("#one>svg");
+      let svg = document.getElementById("searchIcon");
       element.addEventListener("focusin", () => {
         element.style.border = "1px solid #60a5fa";
-        svg.classList.toggle("text-blue-400");
+        svg.style.color = "#60a5fa";
       });
       element.addEventListener("focusout", () => {
         element.style.border = "1px solid black";
-        svg.classList.toggle("text-blue-400");
+        svg.style.color = "grey";
       });
     </script>
   </body>
