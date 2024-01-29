@@ -13,10 +13,19 @@
       .material-symbols-outlined {
         font-size: 2rem !important;
       }
+      .none {
+        display: none !important;
+      }
+      .trans {
+        transition: all 0.5s ease-in-out;
+      }
     </style>
   </head>
   <body class="bg-black text-white">
-    <nav class="px-3 py-2 flex justify-between lg:hidden">
+    <nav
+      class="px-3 py-2 flex justify-between fixed w-full top-0 bg-black lg:hidden"
+      id="navbar"
+    >
       <div class="rounded-full overflow-hidden h-8 w-8 self-center">
         <img src="./Assets/shree-ram-ayodhya-photo-hd1.jpeg" alt="" />
       </div>
@@ -33,10 +42,15 @@
           </g>
         </svg>
       </div>
-      <span class="material-symbols-outlined self-center  " style="font-size: 1.2rem !important;"> settings </span>
+      <span
+        class="material-symbols-outlined self-center"
+        style="font-size: 1.2rem !important"
+      >
+        settings
+      </span>
     </nav>
-    <div class="flex container m-auto">
-      <div class="first w-3/6 h-full hidden lg:block">
+    <div class="lg:flex block lg:container m-auto">
+      <div class="first w-2/6 h-full hidden lg:block">
         <div class="logo invert mb-5">
           <svg
             viewBox="0 0 24 24"
@@ -173,8 +187,20 @@
           </span>
         </div>
       </div>
-      <div class="second w-full border-gray-700 border-x-[0.1px]">b</div>
-      <div class="third w-4/6">
+      <div class="second w-full border-gray-700 border-x-[0.1px] lg:mt-0 mt-12">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit vel
+        labore itaque dolore rerum aut! Obcaecati, quasi. Pariatur rem explicabo
+        libero id recusandae! Cum illo dicta quo vel itaque? Praesentium
+        consectetur sunt ullam deleniti nostrum eaque animi facilis voluptatum
+        eos? Nam quibusdam quis facilis ut quam reprehenderit neque, amet
+        cupiditate provident consequuntur dolor, a voluptatem illo repudiandae
+        pariatur. Velit, saepe maxime, aspernatur consectetur, porro incidunt
+        explicabo nam quo eaque quas nulla? Consectetur, omnis consequatur enim,
+        ipsum corporis dignissimos ex ipsa dolor corrupti, tempora voluptatibus
+        fugiat alias debitis quisquam odio. Quisquam neque quibusdam sint
+        repellendus fugiat, numquam id a reprehenderit quia.
+      </div>
+      <div class="third w-4/6 hidden lg:block">
         <div class="ml-5 mt-2 w-80 space-y-4">
           <div
             id="one"
@@ -235,6 +261,36 @@
           </div>
         </div>
       </div>
+      <footer
+        class="fixed bg-black bottom-0 w-full lg:hidden block border-t-[1px] pt-1 border-gray-700"
+        id="footer"
+      >
+        <ul class="flex justify-around pb-1">
+          <span class="material-symbols-outlined">home</span>
+          <span class="material-symbols-outlined"> Search </span>
+          <svg
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+            class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-1plcrui r-lrvibr r-1nao33i w-7 invert r-lwhw9o r-cnnz9e inline"
+          >
+            <g>
+              <g clip-path="url(#0-clip0_2592_269)" clip-rule="evenodd">
+                <path
+                  d="M4.2 4.2v15.6h15.6V4.2H4.2zM3 2h18c.552 0 1 .448 1 1v18c0 .552-.448 1-1 1H3c-.552 0-1-.448-1-1V3c0-.552.448-1 1-1z"
+                ></path>
+                <path d="M6.68 17.8l8.108-11.58h2.532L9.21 17.8H6.68z"></path>
+              </g>
+              <defs>
+                <clipPath id="0-clip0_2592_269">
+                  <rect height="20" rx="1" width="20" x="2" y="2"></rect>
+                </clipPath>
+              </defs>
+            </g>
+          </svg>
+          <span class="material-symbols-outlined"> Notifications </span>
+          <span class="material-symbols-outlined "> Mail </span>
+        </ul>
+      </footer>
     </div>
     <script>
       let element = document.getElementById("one");
@@ -246,6 +302,28 @@
       element.addEventListener("focusout", () => {
         element.style.border = "1px solid black";
         svg.style.color = "grey";
+      });
+      let footer = document.getElementById("footer");
+      let header = document.getElementById("navbar");
+      window.addEventListener("scroll", () => {
+        if (
+          Math.floor(window.scrollY) >=
+          Math.floor(window.innerHeight * (15 / 100))
+        ) {
+          header.className =
+            "px-3 py-2 flex justify-between fixed top-[-40px] w-full bg-black lg:hidden transition-all duration-1000";
+          footer.style.filter = "brightness(50%)";
+          footer.style.backgroundColor = "transparent";
+        } else {
+          header.className =
+            "px-3 py-2 flex justify-between fixed w-full top-0  bg-black lg:hidden transition-all duration-1000";
+          footer.style.filter = "brightness(100%)";
+          footer.style.backgroundColor = "black";
+        }
+        console.log(
+          Math.floor(window.scrollY),
+          Math.floor(window.innerHeight * (8 / 100))
+        );
       });
     </script>
   </body>
