@@ -67,13 +67,13 @@
         <div class="sidebar">
           <ul class="flex flex-col gap-1">
             <li
-              class="inline-flex hover:cursor-pointer gap-5 max-w-max hover:bg-gray-900 py-2 pr-6 pl-2 hover:rounded-full"
+              class="inline-flex hover:cursor-pointer gap-5 max-w-max hover:bg-side-hover py-2 pr-6 pl-2 hover:rounded-full"
             >
               <span class="material-symbols-outlined">home</span>
               <p class="text-red inline-block font-semibold text-xl">Home</p>
             </li>
             <li
-              class="inline-flex hover:cursor-pointer max-w-max gap-5 hover:bg-gray-900 py-2 pr-6 pl-2 hover:rounded-full"
+              class="inline-flex hover:cursor-pointer max-w-max gap-5 hover:bg-side-hover py-2 pr-6 pl-2 hover:rounded-full"
             >
               <span class="material-symbols-outlined"> Search </span>
               <p class="text-white inline-block font-semibold text-xl">
@@ -81,7 +81,7 @@
               </p>
             </li>
             <li
-              class="inline-flex hover:cursor-pointer max-w-max gap-5 hover:bg-gray-900 py-2 pr-6 pl-2 hover:rounded-full"
+              class="inline-flex hover:cursor-pointer max-w-max gap-5 hover:bg-side-hover py-2 pr-6 pl-2 hover:rounded-full"
             >
               <span class="material-symbols-outlined"> Notifications </span>
               <p class="text-white inline-block font-semibold text-xl">
@@ -89,7 +89,7 @@
               </p>
             </li>
             <li
-              class="inline-flex hover:cursor-pointer max-w-max gap-5 hover:bg-gray-900 py-2 pr-6 pl-2 hover:rounded-full"
+              class="inline-flex hover:cursor-pointer max-w-max gap-5 hover:bg-side-hover py-2 pr-6 pl-2 hover:rounded-full"
             >
               <span class="material-symbols-outlined"> Mail </span>
               <p class="text-white inline-block font-semibold text-xl">
@@ -97,7 +97,7 @@
               </p>
             </li>
             <li
-              class="inline-flex hover:cursor-pointer max-w-max gap-[22px] hover:bg-gray-900 py-2 pr-6 pl-[10px] hover:rounded-full"
+              class="inline-flex hover:cursor-pointer max-w-max gap-[22px] hover:bg-side-hover py-2 pr-6 pl-[10px] hover:rounded-full"
             >
               <svg
                 viewBox="0 0 24 24"
@@ -125,7 +125,7 @@
               </svg>
             </li>
             <li
-              class="inline-flex hover:cursor-pointer max-w-max gap-[20px] hover:bg-gray-900 py-2 pr-6 pl-2 hover:rounded-full"
+              class="inline-flex hover:cursor-pointer max-w-max gap-[20px] hover:bg-side-hover py-2 pr-6 pl-2 hover:rounded-full"
             >
               <span class="material-symbols-outlined">
                 featured_play_list
@@ -133,7 +133,7 @@
               <p class="text-white inline-block font-semibold text-xl">List</p>
             </li>
             <li
-              class="inline-flex hover:cursor-pointer max-w-max gap-[22px] hover:bg-gray-900 py-2 pr-6 pl-[10px] hover:rounded-full"
+              class="inline-flex hover:cursor-pointer max-w-max gap-[22px] hover:bg-side-hover py-2 pr-6 pl-[10px] hover:rounded-full"
             >
               <svg
                 viewBox="0 0 24 24"
@@ -152,7 +152,7 @@
             </li>
 
             <li
-              class="inline-flex hover:cursor-pointer max-w-max gap-5 hover:bg-gray-900 py-2 pr-6 pl-2 hover:rounded-full"
+              class="inline-flex hover:cursor-pointer max-w-max gap-5 hover:bg-side-hover py-2 pr-6 pl-2 hover:rounded-full"
             >
               <span class="material-symbols-outlined"> person </span>
               <p class="text-white inline-block font-semibold text-xl">
@@ -160,29 +160,32 @@
               </p>
             </li>
             <li
-              class="inline-flex hover:cursor-pointer max-w-max gap-5 hover:bg-gray-900 py-2 pr-6 pl-2 hover:rounded-full"
+              class="inline-flex hover:cursor-pointer max-w-max gap-5 hover:bg-side-hover py-2 pr-6 pl-2 hover:rounded-full"
             >
               <span class="material-symbols-outlined"> more_horiz </span>
               <p class="text-white inline-block font-semibold text-xl">More</p>
             </li>
             <li>
               <button
-                class="bg-blue-400 block w-56 p-3 rounded-full font-semibold text-xl mt-1"
+                class="bg-main-color block w-56 p-3 rounded-full font-semibold text-xl mt-1"
               >
                 Post
               </button>
             </li>
           </ul>
         </div>
-        <div class="mt-10 ml-5 flex space-x-4 hover:cursor-pointer mr-5">
+        <div class="pt-10 pl-5 flex space-x-4 hover:cursor-pointer mr-5">
           <div class="rounded-full overflow-hidden h-10 w-10 self-center">
             <img src="./Assets/shree-ram-ayodhya-photo-hd1.jpeg" alt="" />
           </div>
-          <div class="align-top">
+          <div class="align-top max-w-40 min-w-40">
             <p class="font-semibold">Gajanan Bodhankar</p>
             <p class="font-extralight text-gray-400">@GajananBodhank4</p>
           </div>
-          <span class="material-symbols-outlined self-center">
+          <span
+            class="material-symbols-outlined self-center"
+            style="font-size: x-large !important; margin-left: -5px"
+          >
             more_horiz
           </span>
         </div>
@@ -204,7 +207,7 @@
         <div class="ml-5 mt-2 w-80 space-y-4">
           <div
             id="one"
-            class="bg-gray-900 inline-flex justify-start rounded-full w-full pl-4"
+            class="bg-right-main inline-flex justify-start rounded-full w-full pl-4"
             style="border: 1px solid black"
           >
             <svg
@@ -224,23 +227,25 @@
             </svg>
             <input
               type="text"
-              class="py-3 text-sm placeholder:text-gray-500 w-full rounded-full pl-4 bg-gray-900 focus:outline-none"
+              class="py-3 text-sm placeholder:text-gray-500 w-full rounded-full pl-4 bg-right-main focus:outline-none"
               placeholder="Search"
             />
           </div>
-          <div class="bg-gray-900 py-3 px-4 rounded-2xl space-y-2">
+          <div class="bg-right-main py-3 px-4 rounded-2xl space-y-2">
             <div class="font-bold text-xl">Subscribe to Premium</div>
             <div class="">
               Subscribe to unlock new features and if eligible, receive a share
               of ads revenue.
             </div>
-            <button class="bg-blue-400 rounded-full py-2 px-5 font-semibold">
+            <button class="bg-main-color rounded-full py-2 px-5 font-semibold">
               Subscribe
             </button>
           </div>
-          <div class="bg-gray-900 py-3 rounded-2xl">
+          <div class="bg-right-main py-3 rounded-2xl">
             <p class="font-bold text-xl px-4 my-3">What's happening</p>
-            <div class="space-y-1 px-4 hover:bg-gray-800 hover:cursor-pointer">
+            <div
+              class="space-y-1 px-4 hover:bg-right-hover hover:cursor-pointer pt-1"
+            >
               <div class="flex justify-between items-end">
                 <div class="flex space-x-1">
                   <p class="font-extralight text-xs opacity-45">Sports</p>
@@ -253,10 +258,91 @@
               </div>
               <div class="space-y-1">
                 <p class="font-semibold">What a WIN</p>
-                <p class="font-extralight text-xs opacity-45 pb-2">
+                <p class="font-extralight text-xs opacity-45 pb-3">
                   28.9k Posts
                 </p>
               </div>
+            </div>
+            <div
+              class="space-y-1 px-4 hover:bg-right-hover hover:cursor-pointer pt-1"
+            >
+              <div class="flex justify-between items-end">
+                <div class="flex space-x-1">
+                  <p class="font-extralight text-xs opacity-45">Trending</p>
+                </div>
+                <span class="material-symbols-outlined h-6">more_horiz</span>
+              </div>
+              <div class="space-y-1">
+                <p class="font-semibold">Chief Minister</p>
+                <p class="font-extralight text-xs opacity-45 pb-3">
+                  28.9k Posts
+                </p>
+              </div>
+            </div>
+            <div
+              class="space-y-1 px-4 hover:bg-right-hover hover:cursor-pointer pt-1"
+            >
+              <div class="flex justify-between items-end">
+                <div class="flex space-x-1">
+                  <p class="font-extralight text-xs opacity-45">Sports</p>
+                  <div
+                    class="h-[2px] w-[2px] bg-white opacity-45 mt-2 rounded-full"
+                  ></div>
+                  <p class="font-extralight text-xs opacity-45">Trending</p>
+                </div>
+                <span class="material-symbols-outlined h-6">more_horiz</span>
+              </div>
+              <div class="space-y-1">
+                <p class="font-semibold">#tatapower</p>
+                <p class="font-extralight text-xs opacity-45 pb-3">
+                  28.9k Posts
+                </p>
+              </div>
+            </div>
+            <div
+              class="space-y-1 px-4 hover:bg-right-hover hover:cursor-pointer pt-1"
+            >
+              <div class="flex justify-between items-end">
+                <div class="flex space-x-1">
+                  <p class="font-extralight text-xs opacity-45">Sports</p>
+                  <div
+                    class="h-[2px] w-[2px] bg-white opacity-45 mt-2 rounded-full"
+                  ></div>
+                  <p class="font-extralight text-xs opacity-45">Trending</p>
+                </div>
+                <span class="material-symbols-outlined h-6">more_horiz</span>
+              </div>
+              <div class="space-y-1">
+                <p class="font-semibold">#HanumanFlag</p>
+                <p class="font-extralight text-xs opacity-45 pb-3">
+                  28.9k Posts
+                </p>
+              </div>
+            </div>
+            <div
+              class="space-y-1 px-4 hover:bg-right-hover hover:cursor-pointer pt-1"
+            >
+              <div class="flex justify-between items-end">
+                <div class="flex space-x-1">
+                  <p class="font-extralight text-xs opacity-45">Sports</p>
+                  <div
+                    class="h-[2px] w-[2px] bg-white opacity-45 mt-2 rounded-full"
+                  ></div>
+                  <p class="font-extralight text-xs opacity-45">Trending</p>
+                </div>
+                <span class="material-symbols-outlined h-6">more_horiz</span>
+              </div>
+              <div class="space-y-1">
+                <p class="font-semibold">KS Bharat</p>
+                <p class="font-extralight text-xs opacity-45 pb-3">
+                  28.9k Posts
+                </p>
+              </div>
+            </div>
+            <div
+              class="space-y-1 px-4 hover:bg-right-hover hover:cursor-pointer pt-1"
+            >
+              <p class="text-main-color py-2">Show More</p>
             </div>
           </div>
         </div>

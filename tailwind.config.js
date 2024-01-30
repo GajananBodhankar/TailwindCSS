@@ -2,7 +2,14 @@
 module.exports = {
   content: ["*.html"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "main-color": "rgb(29 155 240)",
+        "side-hover": "rgba(231, 233, 234, 0.1)",
+        "right-main": "rgb(22 24 28)",
+        "right-hover": "#1d1f23",
+      },
+    },
     screens: {
       sm: "300px",
       // => @media (min-width: 640px) { ... }
