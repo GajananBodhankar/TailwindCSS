@@ -19,6 +19,16 @@
       .trans {
         transition: all 0.5s ease-in-out;
       }
+      .underBlue::after {
+        content: "";
+        height: 10%;
+        left: 40%;
+        bottom: 0px;
+        width: 20%;
+        border-radius: 150px;
+        background-color: rgb(29 155 240);
+        position: absolute;
+      }
     </style>
   </head>
   <body class="bg-black text-white">
@@ -50,7 +60,7 @@
       </span>
     </nav>
     <div class="lg:flex block lg:container m-auto">
-      <div class="first w-2/6 h-full hidden lg:block">
+      <div class="first w-2/6 h-full hidden lg:block sticky top-0">
         <div class="logo invert mb-5">
           <svg
             viewBox="0 0 24 24"
@@ -191,17 +201,28 @@
         </div>
       </div>
       <div class="second w-full border-gray-700 border-x-[0.1px] lg:mt-0 mt-12">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit vel hi
-        hello labore itaque dolore rerum aut! Obcaecati, quasi. Pariatur rem
-        explicabo libero id recusandae! Cum illo dicta quo vel itaque?
-        Praesentium consectetur sunt ullam deleniti nostrum eaque animi facilis
-        voluptatum eos? Nam quibusdam quis facilis ut quam reprehenderit neque,
-        amet cupiditate provident consequuntur dolor, a voluptatem illo
-        repudiandae pariatur. Velit, saepe maxime, aspernatur consectetur, porro
-        incidunt explicabo nam quo eaque quas nulla? Consectetur, omnis
-        consequatur enim, ipsum corporis dignissimos ex ipsa dolor corrupti,
-        tempora voluptatibus fugiat alias debitis quisquam odio. Quisquam neque
-        quibusdam sint repellendus fugiat, numquam id a reprehenderit quia.
+        <div class="flex border-b-[0.1px] border-gray-700 justify-between">
+          <div
+            class="px-[6.7rem] text-center hover:bg-right-hover py-4 underBlue relative"
+            id="foryou"
+          >
+            For you
+          </div>
+          <div
+            class="px-[6.7rem] text-center hover:bg-right-hover py-4 relative"
+            id="following"
+          >
+            Following
+          </div>
+          <div class="self-center px-2">
+            <span
+              class="material-symbols-outlined p-2 hover:bg-right-hover hover:cursor-pointer text-center rounded-full"
+              style="font-size: 1.2rem !important"
+            >
+              settings
+            </span>
+          </div>
+        </div>
       </div>
       <div class="third w-4/6 hidden lg:block">
         <div class="ml-5 mt-2 w-80 space-y-4">
@@ -345,6 +366,65 @@
               <p class="text-main-color py-2">Show More</p>
             </div>
           </div>
+          <div class="bg-right-main py-3 rounded-2xl">
+            <p class="font-bold text-xl px-4 my-3">Who to follow</p>
+            <div
+              class="pl-4 py-3 flex space-x-2 hover:cursor-pointer hover:bg-right-hover"
+            >
+              <div class="rounded-full overflow-hidden h-10 w-10 self-center">
+                <img src="./Assets/images.jpg" alt="" />
+              </div>
+              <div class="align-top max-w-40 min-w-40">
+                <p class="font-semibold">Dr.S Jaishankar</p>
+                <p class="font-extralight text-gray-400">@sjaishankar</p>
+              </div>
+              <div
+                class="px-5 py-1 self-center box-border block bg-white font-semibold rounded-full"
+                style="color: black"
+              >
+                follow
+              </div>
+            </div>
+            <div
+              class="pl-4 py-3 flex space-x-2 hover:cursor-pointer hover:bg-right-hover"
+            >
+              <div class="rounded-full overflow-hidden h-10 w-10 self-center">
+                <img src="./Assets/ajit-doval7_61e8fedca59a0.jpg" alt="" />
+              </div>
+              <div class="align-top max-w-40 min-w-40">
+                <p class="font-semibold">NSA Ajit Doval</p>
+                <p class="font-extralight text-gray-400">@ajitkumardoval</p>
+              </div>
+              <div
+                class="px-5 py-1 self-center box-border block bg-white font-semibold rounded-full"
+                style="color: black"
+              >
+                follow
+              </div>
+            </div>
+            <div
+              class="pl-4 py-3 flex space-x-2 hover:cursor-pointer hover:bg-right-hover"
+            >
+              <div class="rounded-full overflow-hidden h-10 w-10 self-center">
+                <img src="./Assets/images (1).jpg" alt="" />
+              </div>
+              <div class="align-top max-w-40 min-w-40">
+                <p class="font-semibold">Rohit Sharma</p>
+                <p class="font-extralight text-gray-400">@ro45</p>
+              </div>
+              <div
+                class="px-5 py-1 self-center box-border block bg-white font-semibold rounded-full"
+                style="color: black"
+              >
+                follow
+              </div>
+            </div>
+            <div
+              class="space-y-1 px-4 hover:bg-right-hover hover:cursor-pointer pt-1"
+            >
+              <p class="text-main-color py-2">Show More</p>
+            </div>
+          </div>
         </div>
       </div>
       <footer
@@ -410,6 +490,20 @@
           Math.floor(window.scrollY),
           Math.floor(window.innerHeight * (8 / 100))
         );
+      });
+      let foryou = document.getElementById("foryou");
+      let following = document.getElementById("following");
+      foryou.addEventListener("click", () => {
+        if (!foryou.classList.contains("underBlue")) {
+          foryou.classList.add("underBlue");
+        }
+        following.classList.remove("underBlue");
+      });
+      following.addEventListener("click", () => {
+        if (!following.classList.contains("underBlue")) {
+          following.classList.add("underBlue");
+        }
+        foryou.classList.remove("underBlue");
       });
     </script>
   </body>
