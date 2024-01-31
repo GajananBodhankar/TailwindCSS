@@ -201,15 +201,17 @@
         </div>
       </div>
       <div class="second w-full border-gray-700 border-x-[0.1px] lg:mt-0 mt-12">
-        <div class="flex border-b-[0.1px] border-gray-700 justify-between">
+        <div
+          class="flex border-b-[0.1px] border-gray-700 justify-between sticky top-0 bg-black opacity-85"
+        >
           <div
-            class="px-[6.7rem] text-center hover:bg-right-hover py-4 underBlue relative"
+            class="w-[47%] text-center hover:bg-right-hover py-4 underBlue relative"
             id="foryou"
           >
             For you
           </div>
           <div
-            class="px-[6.7rem] text-center hover:bg-right-hover py-4 relative"
+            class="w-[47%] text-center hover:bg-right-hover py-4 relative opacity-50"
             id="following"
           >
             Following
@@ -223,34 +225,37 @@
             </span>
           </div>
         </div>
+     
       </div>
       <div class="third w-4/6 hidden lg:block">
-        <div class="ml-5 mt-2 w-80 space-y-4">
+        <div class="ml-5 w-80 space-y-4">
           <div
-            id="one"
-            class="bg-right-main inline-flex justify-start rounded-full w-full pl-4"
-            style="border: 1px solid black"
+            class="sticky top-0 pt-3 w-full opacity-100 z-10 bg-black pb-1"
           >
-            <svg
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-              class="w-6 h-6 self-center"
+            <div
+              id="one"
+              class="inline-flex justify-start rounded-full w-full pl-4 h-10 bg-right-main "
             >
-              <path
-                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                id="searchIcon"
-                style="color: grey"
-              ></path>
-            </svg>
-            <input
-              type="text"
-              class="py-3 text-sm placeholder:text-gray-500 w-full rounded-full pl-4 bg-right-main focus:outline-none"
-              placeholder="Search"
-            />
+              <svg
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                class="w-6 h-6 self-center"
+              >
+                <path
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  id="searchIcon"
+                ></path>
+              </svg>
+              <input
+                type="text"
+                class="py-3 text-sm placeholder:text-gray-500 w-full rounded-full bg-right-main pl-4 focus:outline-none"
+                placeholder="Search"
+              />
+            </div>
           </div>
           <div class="bg-right-main py-3 px-4 rounded-2xl space-y-2">
             <div class="font-bold text-xl">Subscribe to Premium</div>
@@ -496,14 +501,18 @@
       foryou.addEventListener("click", () => {
         if (!foryou.classList.contains("underBlue")) {
           foryou.classList.add("underBlue");
+          foryou.classList.remove("opacity-50");
         }
         following.classList.remove("underBlue");
+        following.classList.add("opacity-50");
       });
       following.addEventListener("click", () => {
         if (!following.classList.contains("underBlue")) {
           following.classList.add("underBlue");
+          foryou.classList.add("opacity-50");
         }
         foryou.classList.remove("underBlue");
+        following.classList.remove("opacity-50");
       });
     </script>
   </body>
