@@ -36,24 +36,28 @@
     >
       <div class="sm:flex sm:justify-center">Gajanan's Tailwind</div>
       <ul class="flex md:gap-9 mr-5 sm:flex-col md:flex-row sm:items-center">
-        <li
-          class="animatedUnderline hover:cursor-pointer"
-        >
-          Home
-        </li>
-        <li
-          class="animatedUnderline hover:cursor-pointer"
-        >
-          About
-        </li>
-        <li
-          class="animatedUnderline hover:cursor-pointer"
-        >
-          Contact
-        </li>
+        <li class="animatedUnderline hover:cursor-pointer">Home</li>
+        <li class="animatedUnderline hover:cursor-pointer">About</li>
+        <li class="animatedUnderline hover:cursor-pointer">Contact</li>
       </ul>
     </nav>
     <main>Some content</main>
-    <footer></footer>
+    <footer>
+      <hr class="bg-red-600" />
+      <div class="bg-black h-96 pt-2">
+        <input
+          type="text"
+          placeholder="type"
+          class="bg-transparent"
+          style="border: none !important"
+        />
+      </div>
+    </footer>
+    <script>
+      let input = document.querySelector("input");
+      input.addEventListener("focus", () => {
+        input.style.border = "1px solid black";
+      });
+    </script>
   </body>
 </html>

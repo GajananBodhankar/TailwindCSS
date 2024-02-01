@@ -71,13 +71,13 @@
       >
         <div
           class="w-[50%] lg:w-[47%] text-center hover:bg-right-hover hover:cursor-pointer py-4 underBlue relative"
-          id="foryou"
+          id="foryouNavbar"
         >
           For you
         </div>
         <div
           class="w-[50%] lg:w-[47%] text-center hover:bg-right-hover hover:cursor-pointer py-4 relative opacity-50"
-          id="following"
+          id="followingNavbar"
         >
           Following
         </div>
@@ -261,11 +261,74 @@
         <div
           class="lg:p-5 lg:m-0 mt-[6.5rem] lg:flex hidden border-b-[0.1px] border-gray-700"
         >
-          <div class="space-x-3 items-center flex">
-            <div class="rounded-full overflow-hidden h-10 w-10 self-center">
+          <div class="space-x-3 items-center flex w-full">
+            <div class="rounded-full overflow-hidden h-10 w-11 self-start">
               <img src="./Assets/shree-ram-ayodhya-photo-hd1.jpeg" alt="" />
             </div>
-            <p class="opacity-55 text-xl font-thin">What is happening?!</p>
+            <div class="w-full flex flex-col space-y-3">
+              <input
+                class="placeholder:text-slate-500 text-xl font-thin bg-transparent focus:outline-none w-full text-white"
+                placeholder="What is happening?!"
+                id="whatis"
+              />
+              <div class="space-x-2 hover:cursor-pointer hidden" id="public">
+                <span
+                  class="material-symbols-outlined text-main-color self-center"
+                  style="font-size: larger !important"
+                >
+                  public
+                </span>
+                <p class="text-main-color">Everyone can reply</p>
+              </div>
+              <div class="h-[0.1px] bg-gray-600 w-full hidden" id="hr"></div>
+              <div class="flex justify-between pt-2">
+                <div class="flex space-x-5">
+                  <span
+                    class="material-symbols-outlined text-main-color hover:cursor-pointer"
+                    style="font-size: larger !important"
+                  >
+                    imagesmode
+                  </span>
+                  <span
+                    class="material-symbols-outlined text-main-color hover:cursor-pointer"
+                    style="font-size: larger !important"
+                  >
+                    gif_box
+                  </span>
+
+                  <span
+                    class="material-symbols-outlined text-main-color hover:cursor-pointer"
+                    style="font-size: larger !important"
+                  >
+                    page_info
+                  </span>
+                  <span
+                    class="material-symbols-outlined text-main-color hover:cursor-pointer"
+                    style="font-size: larger !important"
+                  >
+                    sentiment_satisfied
+                  </span>
+                  <span
+                    class="material-symbols-outlined text-main-color hover:cursor-pointer"
+                    style="font-size: larger !important"
+                  >
+                    calendar_clock
+                  </span>
+                  <span
+                    class="material-symbols-outlined text-main-color opacity-50 hover:cursor-pointer"
+                    style="font-size: larger !important"
+                  >
+                    location_on
+                  </span>
+                </div>
+                <button
+                  class="bg-main-color px-3 block rounded-full font-semibold text-lg opacity-55 "
+                  id="post"
+                >
+                  Post
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -503,58 +566,6 @@
         </ul>
       </footer>
     </div>
-    <script>
-      let element = document.getElementById("one");
-      let svg = document.getElementById("searchIcon");
-      element.addEventListener("focusin", () => {
-        element.style.border = "1px solid #60a5fa";
-        svg.style.color = "#60a5fa";
-      });
-      element.addEventListener("focusout", () => {
-        element.style.border = "1px solid black";
-        svg.style.color = "grey";
-      });
-      let footer = document.getElementById("footer");
-      let header = document.getElementById("navbar");
-      let subHeader = document.getElementById("subHeader");
-      window.addEventListener("scroll", () => {
-        if (
-          Math.floor(window.scrollY) >=
-          Math.floor(window.innerHeight * (10 / 100))
-        ) {
-          header.className =
-            "px-3 flex fixed flex-col top-[-80px] w-full bg-black lg:hidden transition-all duration-1000";
-          footer.style.filter = "brightness(50%) ";
-          footer.style.backgroundColor = "transparent";
-        } else {
-          header.className =
-            "px-3 py-2 flex flex-col fixed w-full top-0  bg-black lg:hidden transition-all duration-1000";
-          footer.style.filter = "brightness(100%)";
-          footer.style.backgroundColor = "black";
-        }
-        console.log(
-          Math.floor(window.scrollY),
-          Math.floor(window.innerHeight * (8 / 100))
-        );
-      });
-      let foryou = document.getElementById("foryou");
-      let following = document.getElementById("following");
-      foryou.addEventListener("click", () => {
-        if (!foryou.classList.contains("underBlue")) {
-          foryou.classList.add("underBlue");
-          foryou.classList.remove("opacity-50");
-        }
-        following.classList.remove("underBlue");
-        following.classList.add("opacity-50");
-      });
-      following.addEventListener("click", () => {
-        if (!following.classList.contains("underBlue")) {
-          following.classList.add("underBlue");
-          foryou.classList.add("opacity-50");
-        }
-        foryou.classList.remove("underBlue");
-        following.classList.remove("opacity-50");
-      });
-    </script>
+    <script src="index.js"></script>
   </body>
 </html>
