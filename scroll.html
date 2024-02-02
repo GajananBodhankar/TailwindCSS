@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Scroll Control</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+
+      .scroll-box {
+        width: 50%;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+      }
+
+      #box1 {
+        height: 150vh;
+        overflow-y: auto;
+      }
+
+      #box2 {
+        height: 50vh;
+        overflow-y: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex">
+      <div class="scroll-box" id="box1">box1</div>
+      <div class="scroll-box" id="box2">box2</div>
+    </div>
+
+    <script></script>
+  </body>
+</html>

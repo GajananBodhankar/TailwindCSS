@@ -34,11 +34,20 @@
         background-color: rgb(29 155 240);
         position: absolute;
       }
+      .hoverEffect:hover > span:first-child {
+        background-color: rgb(1 46 76);
+      }
+      .hoverEffectRed:hover>span:first-child{
+        background-color: rgb(62 33 33);
+      }
+      .hoverEffectGreen:hover>span:first-child{
+        background-color: rgb(37 54 36);
+      }
     </style>
   </head>
   <body class="bg-black text-white">
     <nav
-      class="px-3 py-2 flex flex-col fixed w-full top-0 bg-black lg:hidden"
+      class="px-3 py-2 flex flex-col fixed w-full top-0 bg-black z-20 lg:hidden transition-all duration-1000"
       id="navbar"
     >
       <div class="flex justify-between">
@@ -91,7 +100,7 @@
         </div>
       </div>
     </nav>
-    <div class="lg:flex block lg:container m-auto">
+    <div class="lg:flex block lg:container m-auto relative">
       <div class="first w-2/6 h-full hidden lg:block sticky top-0">
         <div class="logo invert mb-5">
           <svg
@@ -322,7 +331,7 @@
                   </span>
                 </div>
                 <button
-                  class="bg-main-color px-3 block rounded-full font-semibold text-lg opacity-55 "
+                  class="bg-main-color px-3 block rounded-full font-semibold text-lg opacity-55"
                   id="post"
                 >
                   Post
@@ -331,212 +340,1300 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="third w-4/6 hidden lg:block">
-        <div class="ml-5 w-80 space-y-4">
-          <div class="sticky top-0 pt-3 w-full opacity-100 z-10 bg-black pb-1">
-            <div
-              id="one"
-              class="inline-flex justify-start rounded-full w-full pl-4 h-10 bg-right-main"
-            >
-              <svg
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-                class="w-6 h-6 self-center"
+        <div
+          class="sm:mt-24 lg:mt-0 border-b-[0.1px] border-gray-700 max-h-[35rem] flex overflow-clip space-x-3 p-2 hover:cursor-pointer"
+        >
+          <div class="w-[10%] flex flex-col items-center px-2 lg:py-0 sm:py-2">
+            <img
+              src="https://yt3.googleusercontent.com/FMezrI6-rOCJXngaTSW3t6I17LwIkTla2G3TU-h_dQ7Zl5dxyK9cO2meMZ7OCpPsKqj3POT6iA=s900-c-k-c0x00ffffff-no-rj"
+              alt=""
+              style="
+                max-height: 3rem !important;
+                border-radius: 10rem;
+                max-width: 2.5rem !important;
+              "
+            />
+          </div>
+          <div class="flex flex-col w-[87%] space-y-2">
+            <div class="flex justify-between">
+              <div>
+                <div class="flex space-x-1 sm:flex-col lg:flex-row">
+                  <div class="flex items-center space-x-1">
+                    <a
+                      href="https://twitter.com/stats_feed"
+                      target="_blank"
+                      class="hover:underline inline"
+                      >World of statistics
+                    </a>
+                    <span
+                      class="material-symbols-outlined text-main-color hover:cursor-pointer pt-1"
+                      style="font-size: larger !important"
+                    >
+                      verified
+                    </span>
+                  </div>
+                  <div class="flex space-x-1 lg:self-end sm:self-start">
+                    <p class="font-extralight text-sm opacity-45">
+                      @stats_feed
+                    </p>
+                    <div
+                      class="h-[2px] w-[2px] bg-white opacity-45 self-center rounded-full"
+                    ></div>
+                    <p class="font-extralight text-sm opacity-45">18h</p>
+                  </div>
+                </div>
+                What comes to your mind when you think of Lionel Messi?
+              </div>
+              <span class="material-symbols-outlined h-6 opacity-55"
+                >more_horiz</span
               >
-                <path
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                  id="searchIcon"
-                ></path>
-              </svg>
-              <input
-                type="text"
-                class="py-3 text-sm placeholder:text-gray-500 w-full rounded-full bg-right-main pl-4 focus:outline-none"
-                placeholder="Search"
-              />
             </div>
-          </div>
-          <div class="bg-right-main py-3 px-4 rounded-2xl space-y-2">
-            <div class="font-bold text-xl">Subscribe to Premium</div>
-            <div class="">
-              Subscribe to unlock new features and if eligible, receive a share
-              of ads revenue.
-            </div>
-            <button class="bg-main-color rounded-full py-2 px-5 font-semibold">
-              Subscribe
-            </button>
-          </div>
-          <div class="bg-right-main py-3 rounded-2xl">
-            <p class="font-bold text-xl px-4 my-3">What's happening</p>
-            <div
-              class="space-y-1 px-4 hover:bg-right-hover hover:cursor-pointer pt-1"
-            >
-              <div class="flex justify-between items-end">
-                <div class="flex space-x-1">
-                  <p class="font-extralight text-xs opacity-45">Sports</p>
-                  <div
-                    class="h-[2px] w-[2px] bg-white opacity-45 mt-2 rounded-full"
-                  ></div>
-                  <p class="font-extralight text-xs opacity-45">Trending</p>
-                </div>
-                <span class="material-symbols-outlined h-6">more_horiz</span>
-              </div>
-              <div class="space-y-1">
-                <p class="font-semibold">What a WIN</p>
-                <p class="font-extralight text-xs opacity-45 pb-3">
-                  28.9k Posts
-                </p>
-              </div>
-            </div>
-            <div
-              class="space-y-1 px-4 hover:bg-right-hover hover:cursor-pointer pt-1"
-            >
-              <div class="flex justify-between items-end">
-                <div class="flex space-x-1">
-                  <p class="font-extralight text-xs opacity-45">Trending</p>
-                </div>
-                <span class="material-symbols-outlined h-6">more_horiz</span>
-              </div>
-              <div class="space-y-1">
-                <p class="font-semibold">Chief Minister</p>
-                <p class="font-extralight text-xs opacity-45 pb-3">
-                  28.9k Posts
-                </p>
-              </div>
-            </div>
-            <div
-              class="space-y-1 px-4 hover:bg-right-hover hover:cursor-pointer pt-1"
-            >
-              <div class="flex justify-between items-end">
-                <div class="flex space-x-1">
-                  <p class="font-extralight text-xs opacity-45">Sports</p>
-                  <div
-                    class="h-[2px] w-[2px] bg-white opacity-45 mt-2 rounded-full"
-                  ></div>
-                  <p class="font-extralight text-xs opacity-45">Trending</p>
-                </div>
-                <span class="material-symbols-outlined h-6">more_horiz</span>
-              </div>
-              <div class="space-y-1">
-                <p class="font-semibold">#tatapower</p>
-                <p class="font-extralight text-xs opacity-45 pb-3">
-                  28.9k Posts
-                </p>
-              </div>
-            </div>
-            <div
-              class="space-y-1 px-4 hover:bg-right-hover hover:cursor-pointer pt-1"
-            >
-              <div class="flex justify-between items-end">
-                <div class="flex space-x-1">
-                  <p class="font-extralight text-xs opacity-45">Sports</p>
-                  <div
-                    class="h-[2px] w-[2px] bg-white opacity-45 mt-2 rounded-full"
-                  ></div>
-                  <p class="font-extralight text-xs opacity-45">Trending</p>
-                </div>
-                <span class="material-symbols-outlined h-6">more_horiz</span>
-              </div>
-              <div class="space-y-1">
-                <p class="font-semibold">#HanumanFlag</p>
-                <p class="font-extralight text-xs opacity-45 pb-3">
-                  28.9k Posts
-                </p>
-              </div>
-            </div>
-            <div
-              class="space-y-1 px-4 hover:bg-right-hover hover:cursor-pointer pt-1"
-            >
-              <div class="flex justify-between items-end">
-                <div class="flex space-x-1">
-                  <p class="font-extralight text-xs opacity-45">Sports</p>
-                  <div
-                    class="h-[2px] w-[2px] bg-white opacity-45 mt-2 rounded-full"
-                  ></div>
-                  <p class="font-extralight text-xs opacity-45">Trending</p>
-                </div>
-                <span class="material-symbols-outlined h-6">more_horiz</span>
-              </div>
-              <div class="space-y-1">
-                <p class="font-semibold">KS Bharat</p>
-                <p class="font-extralight text-xs opacity-45 pb-3">
-                  28.9k Posts
-                </p>
-              </div>
-            </div>
-            <div
-              class="space-y-1 px-4 hover:bg-right-hover hover:cursor-pointer pt-1"
-            >
-              <p class="text-main-color py-2">Show More</p>
-            </div>
-          </div>
-          <div class="bg-right-main py-3 rounded-2xl">
-            <p class="font-bold text-xl px-4 my-3">Who to follow</p>
-            <div
-              class="pl-4 py-3 flex space-x-2 hover:cursor-pointer hover:bg-right-hover"
-            >
-              <div class="rounded-full overflow-hidden h-10 w-10 self-center">
-                <img src="./Assets/images.jpg" alt="" />
-              </div>
-              <div class="align-top max-w-40 min-w-40">
-                <p class="font-semibold">Dr.S Jaishankar</p>
-                <p class="font-extralight text-gray-400">@sjaishankar</p>
+
+            <img
+              src="https://pbs.twimg.com/media/GFLdmnNaEAAeKMp?format=jpg&name=large"
+              class=""
+              alt=""
+              style="
+                object-fit: fill;
+                width: 100%;
+                border-radius: 1rem;
+                height: 80%;
+              "
+            />
+            <div class="flex justify-between pt-1">
+              <div
+                class="flex items-center space-x-1 hover:text-main-color hoverEffect"
+              >
+                <span
+                  class="material-symbols-outlined opacity-55 p-2 rounded-full"
+                  style="font-size: larger !important"
+                >
+                  forum
+                </span>
+                <span class="text-xs opacity-55">58</span>
               </div>
               <div
-                class="px-5 py-1 self-center box-border block bg-white font-semibold rounded-full"
-                style="color: black"
+                class="flex items-center space-x-1 hover:text-green-400 hoverEffectGreen"
               >
-                follow
-              </div>
-            </div>
-            <div
-              class="pl-4 py-3 flex space-x-2 hover:cursor-pointer hover:bg-right-hover"
-            >
-              <div class="rounded-full overflow-hidden h-10 w-10 self-center">
-                <img src="./Assets/ajit-doval7_61e8fedca59a0.jpg" alt="" />
-              </div>
-              <div class="align-top max-w-40 min-w-40">
-                <p class="font-semibold">NSA Ajit Doval</p>
-                <p class="font-extralight text-gray-400">@ajitkumardoval</p>
+                <span
+                  class="material-symbols-outlined opacity-55 p-2 rounded-full"
+                  style="font-size: larger !important"
+                >
+                  repeat
+                </span>
+                <span class="text-xs opacity-55">58</span>
               </div>
               <div
-                class="px-5 py-1 self-center box-border block bg-white font-semibold rounded-full"
-                style="color: black"
+                class="flex items-center space-x-1 hover:text-red-400 hoverEffectRed"
               >
-                follow
-              </div>
-            </div>
-            <div
-              class="pl-4 py-3 flex space-x-2 hover:cursor-pointer hover:bg-right-hover"
-            >
-              <div class="rounded-full overflow-hidden h-10 w-10 self-center">
-                <img src="./Assets/images (1).jpg" alt="" />
-              </div>
-              <div class="align-top max-w-40 min-w-40">
-                <p class="font-semibold">Rohit Sharma</p>
-                <p class="font-extralight text-gray-400">@ro45</p>
+                <span
+                  class="material-symbols-outlined opacity-55 p-2 rounded-full"
+                  style="font-size: larger !important"
+                >
+                  favorite
+                </span>
+                <span class="text-xs opacity-55">58</span>
               </div>
               <div
-                class="px-5 py-1 self-center box-border block bg-white font-semibold rounded-full"
-                style="color: black"
+                class="flex items-center space-x-1 hover:text-main-color hoverEffect"
               >
-                follow
+                <span
+                  class="material-symbols-outlined opacity-55 p-2 rounded-full"
+                  style="font-size: larger !important"
+                >
+                  monitoring
+                </span>
+                <span class="text-xs opacity-55">58</span>
+              </div>
+              <div class="flex items-center space-x-1">
+                <span
+                  class="material-symbols-outlined opacity-55 p-2 rounded-full hover:text-main-color hover:bg-icon-hover  "
+                  style="font-size: larger !important"
+                >
+                  bookmark
+                </span>
+                <span
+                  class="material-symbols-outlined opacity-55 p-2 rounded-full hover:text-main-color hover:bg-icon-hover"
+                  style="font-size: larger !important"
+                >
+                  share
+                </span>
               </div>
             </div>
-            <div
-              class="space-y-1 px-4 hover:bg-right-hover hover:cursor-pointer pt-1"
-            >
-              <p class="text-main-color py-2">Show More</p>
+          </div>
+        </div>
+        <div
+          class="border-b-[0.1px] border-gray-700 max-h-[35rem] flex overflow-clip space-x-3 p-2 hover:cursor-pointer"
+        >
+          <div class="w-[10%] flex flex-col items-center px-2 lg:py-0 sm:py-2">
+            <img
+              src="https://yt3.googleusercontent.com/FMezrI6-rOCJXngaTSW3t6I17LwIkTla2G3TU-h_dQ7Zl5dxyK9cO2meMZ7OCpPsKqj3POT6iA=s900-c-k-c0x00ffffff-no-rj"
+              alt=""
+              style="
+                max-height: 3rem !important;
+                border-radius: 10rem;
+                max-width: 2.5rem !important;
+              "
+            />
+          </div>
+          <div class="flex flex-col w-[87%] space-y-2">
+            <div class="flex justify-between">
+              <div>
+                <div class="flex space-x-1 sm:flex-col lg:flex-row">
+                  <div class="flex items-center space-x-1">
+                    <a
+                      href="https://twitter.com/stats_feed"
+                      target="_blank"
+                      class="hover:underline inline"
+                      >World of statistics
+                    </a>
+                    <span
+                      class="material-symbols-outlined text-main-color hover:cursor-pointer pt-1"
+                      style="font-size: larger !important"
+                    >
+                      verified
+                    </span>
+                  </div>
+                  <div class="flex space-x-1 lg:self-end sm:self-start">
+                    <p class="font-extralight text-sm opacity-45">
+                      @stats_feed
+                    </p>
+                    <div
+                      class="h-[2px] w-[2px] bg-white opacity-45 self-center rounded-full"
+                    ></div>
+                    <p class="font-extralight text-sm opacity-45">18h</p>
+                  </div>
+                </div>
+                What comes to your mind when you think of Barack Obama?
+              </div>
+              <span class="material-symbols-outlined h-6 opacity-55"
+                >more_horiz</span
+              >
+            </div>
+
+            <img
+              src="https://pbs.twimg.com/media/GEnlQjvXUAAzOAL?format=jpg&name=small"
+              class=""
+              alt=""
+              style="
+                object-fit: fill;
+                width: 100%;
+                border-radius: 1rem;
+                height: 80%;
+              "
+            />
+            <div class="flex justify-between pt-1">
+              <div
+                class="flex items-center space-x-1 hover:text-main-color hoverEffect"
+              >
+                <span
+                  class="material-symbols-outlined opacity-55 p-2 rounded-full"
+                  style="font-size: larger !important"
+                >
+                  forum
+                </span>
+                <span class="text-xs opacity-55">58</span>
+              </div>
+              <div
+                class="flex items-center space-x-1 hover:text-green-400 hoverEffectGreen"
+              >
+                <span
+                  class="material-symbols-outlined opacity-55 p-2 rounded-full"
+                  style="font-size: larger !important"
+                >
+                  repeat
+                </span>
+                <span class="text-xs opacity-55">58</span>
+              </div>
+              <div
+                class="flex items-center space-x-1 hover:text-red-400 hoverEffectRed"
+              >
+                <span
+                  class="material-symbols-outlined opacity-55 p-2 rounded-full"
+                  style="font-size: larger !important"
+                >
+                  favorite
+                </span>
+                <span class="text-xs opacity-55">58</span>
+              </div>
+              <div
+                class="flex items-center space-x-1 hover:text-main-color hoverEffect"
+              >
+                <span
+                  class="material-symbols-outlined opacity-55 p-2 rounded-full"
+                  style="font-size: larger !important"
+                >
+                  monitoring
+                </span>
+                <span class="text-xs opacity-55">58</span>
+              </div>
+              <div class="flex items-center space-x-1">
+                <span
+                  class="material-symbols-outlined opacity-55 p-2 rounded-full hover:text-main-color hover:bg-icon-hover  "
+                  style="font-size: larger !important"
+                >
+                  bookmark
+                </span>
+                <span
+                  class="material-symbols-outlined opacity-55 p-2 rounded-full hover:text-main-color hover:bg-icon-hover"
+                  style="font-size: larger !important"
+                >
+                  share
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-b-[0.1px] border-gray-700 max-h-[35rem] flex overflow-clip space-x-3 p-2 hover:cursor-pointer"
+        >
+          <div class="w-[10%] flex flex-col items-center px-2 lg:py-0 sm:py-2">
+            <img
+              src="https://yt3.googleusercontent.com/FMezrI6-rOCJXngaTSW3t6I17LwIkTla2G3TU-h_dQ7Zl5dxyK9cO2meMZ7OCpPsKqj3POT6iA=s900-c-k-c0x00ffffff-no-rj"
+              alt=""
+              style="
+                max-height: 3rem !important;
+                border-radius: 10rem;
+                max-width: 2.5rem !important;
+              "
+            />
+          </div>
+          <div class="flex flex-col w-[87%] space-y-2">
+            <div class="flex justify-between">
+              <div>
+                <div class="flex space-x-1 sm:flex-col lg:flex-row">
+                  <div class="flex items-center space-x-1">
+                    <a
+                      href="https://twitter.com/stats_feed"
+                      target="_blank"
+                      class="hover:underline inline"
+                      >World of statistics
+                    </a>
+                    <span
+                      class="material-symbols-outlined text-main-color hover:cursor-pointer pt-1"
+                      style="font-size: larger !important"
+                    >
+                      verified
+                    </span>
+                  </div>
+                  <div class="flex space-x-1 lg:self-end sm:self-start">
+                    <p class="font-extralight text-sm opacity-45">
+                      @stats_feed
+                    </p>
+                    <div
+                      class="h-[2px] w-[2px] bg-white opacity-45 self-center rounded-full"
+                    ></div>
+                    <p class="font-extralight text-sm opacity-45">18h</p>
+                  </div>
+                </div>
+                Without googling, can you tell where India is on the map?
+              </div>
+              <span class="material-symbols-outlined h-6 opacity-55"
+                >more_horiz</span
+              >
+            </div>
+
+            <img
+              src="https://pbs.twimg.com/media/GE7fo0_XoAA1lBW?format=jpg&name=small"
+              class=""
+              alt=""
+              style="
+                object-fit: fill;
+                width: 100%;
+                border-radius: 1rem;
+                height: 80%;
+              "
+            />
+            <div class="flex justify-between pt-1">
+              <div
+                class="flex items-center space-x-1 hover:text-main-color hoverEffect"
+              >
+                <span
+                  class="material-symbols-outlined opacity-55 p-2 rounded-full"
+                  style="font-size: larger !important"
+                >
+                  forum
+                </span>
+                <span class="text-xs opacity-55">58</span>
+              </div>
+              <div
+                class="flex items-center space-x-1 hover:text-green-400 hoverEffectGreen"
+              >
+                <span
+                  class="material-symbols-outlined opacity-55 p-2 rounded-full"
+                  style="font-size: larger !important"
+                >
+                  repeat
+                </span>
+                <span class="text-xs opacity-55">58</span>
+              </div>
+              <div
+                class="flex items-center space-x-1 hover:text-red-400 hoverEffectRed"
+              >
+                <span
+                  class="material-symbols-outlined opacity-55 p-2 rounded-full"
+                  style="font-size: larger !important"
+                >
+                  favorite
+                </span>
+                <span class="text-xs opacity-55">58</span>
+              </div>
+              <div
+                class="flex items-center space-x-1 hover:text-main-color hoverEffect"
+              >
+                <span
+                  class="material-symbols-outlined opacity-55 p-2 rounded-full"
+                  style="font-size: larger !important"
+                >
+                  monitoring
+                </span>
+                <span class="text-xs opacity-55">58</span>
+              </div>
+              <div class="flex items-center space-x-1">
+                <span
+                  class="material-symbols-outlined opacity-55 p-2 rounded-full hover:text-main-color hover:bg-icon-hover  "
+                  style="font-size: larger !important"
+                >
+                  bookmark
+                </span>
+                <span
+                  class="material-symbols-outlined opacity-55 p-2 rounded-full hover:text-main-color hover:bg-icon-hover"
+                  style="font-size: larger !important"
+                >
+                  share
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-b-[0.1px] border-gray-700 max-h-[35rem] flex overflow-clip space-x-3 p-2 hover:cursor-pointer"
+        >
+          <div class="w-[10%] flex flex-col items-center px-2 lg:py-0 sm:py-2">
+            <img
+              src="https://yt3.googleusercontent.com/FMezrI6-rOCJXngaTSW3t6I17LwIkTla2G3TU-h_dQ7Zl5dxyK9cO2meMZ7OCpPsKqj3POT6iA=s900-c-k-c0x00ffffff-no-rj"
+              alt=""
+              style="
+                max-height: 3rem !important;
+                border-radius: 10rem;
+                max-width: 2.5rem !important;
+              "
+            />
+          </div>
+          <div class="flex flex-col w-[87%] space-y-2">
+            <div class="flex justify-between">
+              <div>
+                <div class="flex space-x-1 sm:flex-col lg:flex-row">
+                  <div class="flex items-center space-x-1">
+                    <a
+                      href="https://twitter.com/stats_feed"
+                      target="_blank"
+                      class="hover:underline inline"
+                      >World of statistics
+                    </a>
+                    <span
+                      class="material-symbols-outlined text-main-color hover:cursor-pointer pt-1"
+                      style="font-size: larger !important"
+                    >
+                      verified
+                    </span>
+                  </div>
+                  <div class="flex space-x-1 lg:self-end sm:self-start">
+                    <p class="font-extralight text-sm opacity-45">
+                      @stats_feed
+                    </p>
+                    <div
+                      class="h-[2px] w-[2px] bg-white opacity-45 self-center rounded-full"
+                    ></div>
+                    <p class="font-extralight text-sm opacity-45">18h</p>
+                  </div>
+                </div>
+                Guess the country!?
+              </div>
+              <span class="material-symbols-outlined h-6 opacity-55"
+                >more_horiz</span
+              >
+            </div>
+
+            <img
+              src="https://pbs.twimg.com/media/GFAlAYEbwAADV_9?format=jpg&name=small"
+              class=""
+              alt=""
+              style="
+                object-fit: fill;
+                width: 100%;
+                border-radius: 1rem;
+                height: 80%;
+              "
+            />
+            <div class="flex justify-between pt-1">
+              <div
+                class="flex items-center space-x-1 hover:text-main-color hoverEffect"
+              >
+                <span
+                  class="material-symbols-outlined opacity-55 p-2 rounded-full"
+                  style="font-size: larger !important"
+                >
+                  forum
+                </span>
+                <span class="text-xs opacity-55">58</span>
+              </div>
+              <div
+                class="flex items-center space-x-1 hover:text-green-400 hoverEffectGreen"
+              >
+                <span
+                  class="material-symbols-outlined opacity-55 p-2 rounded-full"
+                  style="font-size: larger !important"
+                >
+                  repeat
+                </span>
+                <span class="text-xs opacity-55">58</span>
+              </div>
+              <div
+                class="flex items-center space-x-1 hover:text-red-400 hoverEffectRed"
+              >
+                <span
+                  class="material-symbols-outlined opacity-55 p-2 rounded-full"
+                  style="font-size: larger !important"
+                >
+                  favorite
+                </span>
+                <span class="text-xs opacity-55">58</span>
+              </div>
+              <div
+                class="flex items-center space-x-1 hover:text-main-color hoverEffect"
+              >
+                <span
+                  class="material-symbols-outlined opacity-55 p-2 rounded-full"
+                  style="font-size: larger !important"
+                >
+                  monitoring
+                </span>
+                <span class="text-xs opacity-55">58</span>
+              </div>
+              <div class="flex items-center space-x-1">
+                <span
+                  class="material-symbols-outlined opacity-55 p-2 rounded-full hover:text-main-color hover:bg-icon-hover  "
+                  style="font-size: larger !important"
+                >
+                  bookmark
+                </span>
+                <span
+                  class="material-symbols-outlined opacity-55 p-2 rounded-full hover:text-main-color hover:bg-icon-hover"
+                  style="font-size: larger !important"
+                >
+                  share
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-b-[0.1px] border-gray-700 max-h-[35rem] flex overflow-clip space-x-3 p-2 hover:cursor-pointer"
+        >
+          <div class="w-[10%] flex flex-col items-center px-2 lg:py-0 sm:py-2">
+            <img
+              src="https://yt3.googleusercontent.com/FMezrI6-rOCJXngaTSW3t6I17LwIkTla2G3TU-h_dQ7Zl5dxyK9cO2meMZ7OCpPsKqj3POT6iA=s900-c-k-c0x00ffffff-no-rj"
+              alt=""
+              style="
+                max-height: 3rem !important;
+                border-radius: 10rem;
+                max-width: 2.5rem !important;
+              "
+            />
+          </div>
+          <div class="flex flex-col w-[87%] space-y-2">
+            <div class="flex justify-between">
+              <div>
+                <div class="flex space-x-1 sm:flex-col lg:flex-row">
+                  <div class="flex items-center space-x-1">
+                    <a
+                      href="https://twitter.com/stats_feed"
+                      target="_blank"
+                      class="hover:underline inline"
+                      >World of statistics
+                    </a>
+                    <span
+                      class="material-symbols-outlined text-main-color hover:cursor-pointer pt-1"
+                      style="font-size: larger !important"
+                    >
+                      verified
+                    </span>
+                  </div>
+                  <div class="flex space-x-1 lg:self-end sm:self-start">
+                    <p class="font-extralight text-sm opacity-45">
+                      @stats_feed
+                    </p>
+                    <div
+                      class="h-[2px] w-[2px] bg-white opacity-45 self-center rounded-full"
+                    ></div>
+                    <p class="font-extralight text-sm opacity-45">18h</p>
+                  </div>
+                </div>
+                What comes to your mind when you think of Bill Clinton?
+              </div>
+              <span class="material-symbols-outlined h-6 opacity-55"
+                >more_horiz</span
+              >
+            </div>
+
+            <img
+              src="https://pbs.twimg.com/media/GE8FTJKXYAUyhRT?format=jpg&name=small"
+              class=""
+              alt=""
+              style="
+                object-fit: fill;
+                width: 100%;
+                border-radius: 1rem;
+                height: 80%;
+              "
+            />
+            <div class="flex justify-between pt-1">
+              <div
+                class="flex items-center space-x-1 hover:text-main-color hoverEffect"
+              >
+                <span
+                  class="material-symbols-outlined opacity-55 p-2 rounded-full"
+                  style="font-size: larger !important"
+                >
+                  forum
+                </span>
+                <span class="text-xs opacity-55">58</span>
+              </div>
+              <div
+                class="flex items-center space-x-1 hover:text-green-400 hoverEffectGreen"
+              >
+                <span
+                  class="material-symbols-outlined opacity-55 p-2 rounded-full"
+                  style="font-size: larger !important"
+                >
+                  repeat
+                </span>
+                <span class="text-xs opacity-55">58</span>
+              </div>
+              <div
+                class="flex items-center space-x-1 hover:text-red-400 hoverEffectRed"
+              >
+                <span
+                  class="material-symbols-outlined opacity-55 p-2 rounded-full"
+                  style="font-size: larger !important"
+                >
+                  favorite
+                </span>
+                <span class="text-xs opacity-55">58</span>
+              </div>
+              <div
+                class="flex items-center space-x-1 hover:text-main-color hoverEffect"
+              >
+                <span
+                  class="material-symbols-outlined opacity-55 p-2 rounded-full"
+                  style="font-size: larger !important"
+                >
+                  monitoring
+                </span>
+                <span class="text-xs opacity-55">58</span>
+              </div>
+              <div class="flex items-center space-x-1">
+                <span
+                  class="material-symbols-outlined opacity-55 p-2 rounded-full hover:text-main-color hover:bg-icon-hover  "
+                  style="font-size: larger !important"
+                >
+                  bookmark
+                </span>
+                <span
+                  class="material-symbols-outlined opacity-55 p-2 rounded-full hover:text-main-color hover:bg-icon-hover"
+                  style="font-size: larger !important"
+                >
+                  share
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-b-[0.1px] border-gray-700 max-h-[35rem] flex overflow-clip space-x-3 p-2 hover:cursor-pointer"
+        >
+          <div class="w-[10%] flex flex-col items-center px-2 lg:py-0 sm:py-2">
+            <img
+              src="https://yt3.googleusercontent.com/FMezrI6-rOCJXngaTSW3t6I17LwIkTla2G3TU-h_dQ7Zl5dxyK9cO2meMZ7OCpPsKqj3POT6iA=s900-c-k-c0x00ffffff-no-rj"
+              alt=""
+              style="
+                max-height: 3rem !important;
+                border-radius: 10rem;
+                max-width: 2.5rem !important;
+              "
+            />
+          </div>
+          <div class="flex flex-col w-[87%] space-y-2">
+            <div class="flex justify-between">
+              <div>
+                <div class="flex space-x-1 sm:flex-col lg:flex-row">
+                  <div class="flex items-center space-x-1">
+                    <a
+                      href="https://twitter.com/stats_feed"
+                      target="_blank"
+                      class="hover:underline inline"
+                      >World of statistics
+                    </a>
+                    <span
+                      class="material-symbols-outlined text-main-color hover:cursor-pointer pt-1"
+                      style="font-size: larger !important"
+                    >
+                      verified
+                    </span>
+                  </div>
+                  <div class="flex space-x-1 lg:self-end sm:self-start">
+                    <p class="font-extralight text-sm opacity-45">
+                      @stats_feed
+                    </p>
+                    <div
+                      class="h-[2px] w-[2px] bg-white opacity-45 self-center rounded-full"
+                    ></div>
+                    <p class="font-extralight text-sm opacity-45">18h</p>
+                  </div>
+                </div>
+                What comes to your mind when you think of LeBron James?
+              </div>
+              <span class="material-symbols-outlined h-6 opacity-55"
+                >more_horiz</span
+              >
+            </div>
+
+            <img
+              src="https://pbs.twimg.com/media/GFCHipCbYAAAYbD?format=jpg&name=small"
+              class=""
+              alt=""
+              style="
+                object-fit: fill;
+                width: 100%;
+                border-radius: 1rem;
+                height: 80%;
+              "
+            />
+            <div class="flex justify-between pt-1">
+              <div
+                class="flex items-center space-x-1 hover:text-main-color hoverEffect"
+              >
+                <span
+                  class="material-symbols-outlined opacity-55 p-2 rounded-full"
+                  style="font-size: larger !important"
+                >
+                  forum
+                </span>
+                <span class="text-xs opacity-55">58</span>
+              </div>
+              <div
+                class="flex items-center space-x-1 hover:text-green-400 hoverEffectGreen"
+              >
+                <span
+                  class="material-symbols-outlined opacity-55 p-2 rounded-full"
+                  style="font-size: larger !important"
+                >
+                  repeat
+                </span>
+                <span class="text-xs opacity-55">58</span>
+              </div>
+              <div
+                class="flex items-center space-x-1 hover:text-red-400 hoverEffectRed"
+              >
+                <span
+                  class="material-symbols-outlined opacity-55 p-2 rounded-full"
+                  style="font-size: larger !important"
+                >
+                  favorite
+                </span>
+                <span class="text-xs opacity-55">58</span>
+              </div>
+              <div
+                class="flex items-center space-x-1 hover:text-main-color hoverEffect"
+              >
+                <span
+                  class="material-symbols-outlined opacity-55 p-2 rounded-full"
+                  style="font-size: larger !important"
+                >
+                  monitoring
+                </span>
+                <span class="text-xs opacity-55">58</span>
+              </div>
+              <div class="flex items-center space-x-1">
+                <span
+                  class="material-symbols-outlined opacity-55 p-2 rounded-full hover:text-main-color hover:bg-icon-hover  "
+                  style="font-size: larger !important"
+                >
+                  bookmark
+                </span>
+                <span
+                  class="material-symbols-outlined opacity-55 p-2 rounded-full hover:text-main-color hover:bg-icon-hover"
+                  style="font-size: larger !important"
+                >
+                  share
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-b-[0.1px] border-gray-700 max-h-[35rem] flex overflow-clip space-x-3 p-2 hover:cursor-pointer"
+        >
+          <div class="w-[10%] flex flex-col items-center px-2 lg:py-0 sm:py-2">
+            <img
+              src="https://yt3.googleusercontent.com/FMezrI6-rOCJXngaTSW3t6I17LwIkTla2G3TU-h_dQ7Zl5dxyK9cO2meMZ7OCpPsKqj3POT6iA=s900-c-k-c0x00ffffff-no-rj"
+              alt=""
+              style="
+                max-height: 3rem !important;
+                border-radius: 10rem;
+                max-width: 2.5rem !important;
+              "
+            />
+          </div>
+          <div class="flex flex-col w-[87%] space-y-2">
+            <div class="flex justify-between">
+              <div>
+                <div class="flex space-x-1 sm:flex-col lg:flex-row">
+                  <div class="flex items-center space-x-1">
+                    <a
+                      href="https://twitter.com/stats_feed"
+                      target="_blank"
+                      class="hover:underline inline"
+                      >World of statistics
+                    </a>
+                    <span
+                      class="material-symbols-outlined text-main-color hover:cursor-pointer pt-1"
+                      style="font-size: larger !important"
+                    >
+                      verified
+                    </span>
+                  </div>
+                  <div class="flex space-x-1 lg:self-end sm:self-start">
+                    <p class="font-extralight text-sm opacity-45">
+                      @stats_feed
+                    </p>
+                    <div
+                      class="h-[2px] w-[2px] bg-white opacity-45 self-center rounded-full"
+                    ></div>
+                    <p class="font-extralight text-sm opacity-45">18h</p>
+                  </div>
+                </div>
+                Guess the country!?
+              </div>
+              <span class="material-symbols-outlined h-6 opacity-55"
+                >more_horiz</span
+              >
+            </div>
+
+            <img
+              src="https://pbs.twimg.com/media/GFF7v_da0AEnSw5?format=jpg&name=small"
+              class=""
+              alt=""
+              style="
+                object-fit: fill;
+                width: 100%;
+                border-radius: 1rem;
+                height: 80%;
+              "
+            />
+            <div class="flex justify-between pt-1">
+              <div
+                class="flex items-center space-x-1 hover:text-main-color hoverEffect"
+              >
+                <span
+                  class="material-symbols-outlined opacity-55 p-2 rounded-full"
+                  style="font-size: larger !important"
+                >
+                  forum
+                </span>
+                <span class="text-xs opacity-55">58</span>
+              </div>
+              <div
+                class="flex items-center space-x-1 hover:text-green-400 hoverEffectGreen"
+              >
+                <span
+                  class="material-symbols-outlined opacity-55 p-2 rounded-full"
+                  style="font-size: larger !important"
+                >
+                  repeat
+                </span>
+                <span class="text-xs opacity-55">58</span>
+              </div>
+              <div
+                class="flex items-center space-x-1 hover:text-red-400 hoverEffectRed"
+              >
+                <span
+                  class="material-symbols-outlined opacity-55 p-2 rounded-full"
+                  style="font-size: larger !important"
+                >
+                  favorite
+                </span>
+                <span class="text-xs opacity-55">58</span>
+              </div>
+              <div
+                class="flex items-center space-x-1 hover:text-main-color hoverEffect"
+              >
+                <span
+                  class="material-symbols-outlined opacity-55 p-2 rounded-full"
+                  style="font-size: larger !important"
+                >
+                  monitoring
+                </span>
+                <span class="text-xs opacity-55">58</span>
+              </div>
+              <div class="flex items-center space-x-1">
+                <span
+                  class="material-symbols-outlined opacity-55 p-2 rounded-full hover:text-main-color hover:bg-icon-hover  "
+                  style="font-size: larger !important"
+                >
+                  bookmark
+                </span>
+                <span
+                  class="material-symbols-outlined opacity-55 p-2 rounded-full hover:text-main-color hover:bg-icon-hover"
+                  style="font-size: larger !important"
+                >
+                  share
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-b-[0.1px] border-gray-700 max-h-[35rem] flex overflow-clip space-x-3 p-2 hover:cursor-pointer"
+        >
+          <div class="w-[10%] flex flex-col items-center px-2 lg:py-0 sm:py-2">
+            <img
+              src="https://yt3.googleusercontent.com/FMezrI6-rOCJXngaTSW3t6I17LwIkTla2G3TU-h_dQ7Zl5dxyK9cO2meMZ7OCpPsKqj3POT6iA=s900-c-k-c0x00ffffff-no-rj"
+              alt=""
+              style="
+                max-height: 3rem !important;
+                border-radius: 10rem;
+                max-width: 2.5rem !important;
+              "
+            />
+          </div>
+          <div class="flex flex-col w-[87%] space-y-2">
+            <div class="flex justify-between">
+              <div>
+                <div class="flex space-x-1 sm:flex-col lg:flex-row">
+                  <div class="flex items-center space-x-1">
+                    <a
+                      href="https://twitter.com/stats_feed"
+                      target="_blank"
+                      class="hover:underline inline"
+                      >World of statistics
+                    </a>
+                    <span
+                      class="material-symbols-outlined text-main-color hover:cursor-pointer pt-1"
+                      style="font-size: larger !important"
+                    >
+                      verified
+                    </span>
+                  </div>
+                  <div class="flex space-x-1 lg:self-end sm:self-start">
+                    <p class="font-extralight text-sm opacity-45">
+                      @stats_feed
+                    </p>
+                    <div
+                      class="h-[2px] w-[2px] bg-white opacity-45 self-center rounded-full"
+                    ></div>
+                    <p class="font-extralight text-sm opacity-45">18h</p>
+                  </div>
+                </div>
+                What comes to mind when you think of Bernie Sanders?
+              </div>
+              <span class="material-symbols-outlined h-6 opacity-55"
+                >more_horiz</span
+              >
+            </div>
+
+            <img
+              src="https://pbs.twimg.com/media/GFHMI2rboAA783R?format=jpg&name=small"
+              class=""
+              alt=""
+              style="
+                object-fit: fill;
+                width: 100%;
+                border-radius: 1rem;
+                height: 80%;
+              "
+            />
+            <div class="flex justify-between pt-1">
+              <div
+                class="flex items-center space-x-1 hover:text-main-color hoverEffect"
+              >
+                <span
+                  class="material-symbols-outlined opacity-55 p-2 rounded-full"
+                  style="font-size: larger !important"
+                >
+                  forum
+                </span>
+                <span class="text-xs opacity-55">58</span>
+              </div>
+              <div
+                class="flex items-center space-x-1 hover:text-green-400 hoverEffectGreen"
+              >
+                <span
+                  class="material-symbols-outlined opacity-55 p-2 rounded-full"
+                  style="font-size: larger !important"
+                >
+                  repeat
+                </span>
+                <span class="text-xs opacity-55">58</span>
+              </div>
+              <div
+                class="flex items-center space-x-1 hover:text-red-400 hoverEffectRed"
+              >
+                <span
+                  class="material-symbols-outlined opacity-55 p-2 rounded-full"
+                  style="font-size: larger !important"
+                >
+                  favorite
+                </span>
+                <span class="text-xs opacity-55">58</span>
+              </div>
+              <div
+                class="flex items-center space-x-1 hover:text-main-color hoverEffect"
+              >
+                <span
+                  class="material-symbols-outlined opacity-55 p-2 rounded-full"
+                  style="font-size: larger !important"
+                >
+                  monitoring
+                </span>
+                <span class="text-xs opacity-55">58</span>
+              </div>
+              <div class="flex items-center space-x-1">
+                <span
+                  class="material-symbols-outlined opacity-55 p-2 rounded-full hover:text-main-color hover:bg-icon-hover  "
+                  style="font-size: larger !important"
+                >
+                  bookmark
+                </span>
+                <span
+                  class="material-symbols-outlined opacity-55 p-2 rounded-full hover:text-main-color hover:bg-icon-hover"
+                  style="font-size: larger !important"
+                >
+                  share
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-b-[0.1px] border-gray-700 max-h-[35rem] flex overflow-clip space-x-3 p-2 hover:cursor-pointer"
+        >
+          <div class="w-[10%] flex flex-col items-center px-2 lg:py-0 sm:py-2">
+            <img
+              src="https://yt3.googleusercontent.com/FMezrI6-rOCJXngaTSW3t6I17LwIkTla2G3TU-h_dQ7Zl5dxyK9cO2meMZ7OCpPsKqj3POT6iA=s900-c-k-c0x00ffffff-no-rj"
+              alt=""
+              style="
+                max-height: 3rem !important;
+                border-radius: 10rem;
+                max-width: 2.5rem !important;
+              "
+            />
+          </div>
+          <div class="flex flex-col w-[87%] space-y-2">
+            <div class="flex justify-between">
+              <div>
+                <div class="flex space-x-1 sm:flex-col lg:flex-row">
+                  <div class="flex items-center space-x-1">
+                    <a
+                      href="https://twitter.com/stats_feed"
+                      target="_blank"
+                      class="hover:underline inline"
+                      >World of statistics
+                    </a>
+                    <span
+                      class="material-symbols-outlined text-main-color hover:cursor-pointer pt-1"
+                      style="font-size: larger !important"
+                    >
+                      verified
+                    </span>
+                  </div>
+                  <div class="flex space-x-1 lg:self-end sm:self-start">
+                    <p class="font-extralight text-sm opacity-45">
+                      @stats_feed
+                    </p>
+                    <div
+                      class="h-[2px] w-[2px] bg-white opacity-45 self-center rounded-full"
+                    ></div>
+                    <p class="font-extralight text-sm opacity-45">18h</p>
+                  </div>
+                </div>
+                Can you name the country by its flag?
+              </div>
+              <span class="material-symbols-outlined h-6 opacity-55"
+                >more_horiz</span
+              >
+            </div>
+
+            <img
+              src="https://pbs.twimg.com/media/GFLC427XYAAsInf?format=jpg&name=small"
+              class=""
+              alt=""
+              style="
+                object-fit: fill;
+                width: 100%;
+                border-radius: 1rem;
+                height: 80%;
+              "
+            />
+            <div class="flex justify-between pt-1">
+              <div
+                class="flex items-center space-x-1 hover:text-main-color hoverEffect"
+              >
+                <span
+                  class="material-symbols-outlined opacity-55 p-2 rounded-full"
+                  style="font-size: larger !important"
+                >
+                  forum
+                </span>
+                <span class="text-xs opacity-55">58</span>
+              </div>
+              <div
+                class="flex items-center space-x-1 hover:text-green-400 hoverEffectGreen"
+              >
+                <span
+                  class="material-symbols-outlined opacity-55 p-2 rounded-full"
+                  style="font-size: larger !important"
+                >
+                  repeat
+                </span>
+                <span class="text-xs opacity-55">58</span>
+              </div>
+              <div
+                class="flex items-center space-x-1 hover:text-red-400 hoverEffectRed"
+              >
+                <span
+                  class="material-symbols-outlined opacity-55 p-2 rounded-full"
+                  style="font-size: larger !important"
+                >
+                  favorite
+                </span>
+                <span class="text-xs opacity-55">58</span>
+              </div>
+              <div
+                class="flex items-center space-x-1 hover:text-main-color hoverEffect"
+              >
+                <span
+                  class="material-symbols-outlined opacity-55 p-2 rounded-full"
+                  style="font-size: larger !important"
+                >
+                  monitoring
+                </span>
+                <span class="text-xs opacity-55">58</span>
+              </div>
+              <div class="flex items-center space-x-1">
+                <span
+                  class="material-symbols-outlined opacity-55 p-2 rounded-full hover:text-main-color hover:bg-icon-hover  "
+                  style="font-size: larger !important"
+                >
+                  bookmark
+                </span>
+                <span
+                  class="material-symbols-outlined opacity-55 p-2 rounded-full hover:text-main-color hover:bg-icon-hover"
+                  style="font-size: larger !important"
+                >
+                  share
+                </span>
+              </div>
             </div>
           </div>
         </div>
       </div>
+      <div class="third w-4/6 hidden lg:block px-5 space-y-4">
+        <div class="sticky top-0 pt-3 w-full opacity-100 z-10 bg-black pb-1">
+          <div
+            id="one"
+            class="inline-flex justify-start rounded-full w-full pl-4 h-10 bg-right-main"
+          >
+            <svg
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              class="w-6 h-6 self-center"
+            >
+              <path
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                id="searchIcon"
+              ></path>
+            </svg>
+            <input
+              type="text"
+              class="py-3 text-sm placeholder:text-gray-500 w-full rounded-full bg-right-main pl-4 focus:outline-none"
+              placeholder="Search"
+            />
+          </div>
+        </div>
+        <div
+          class="bg-right-main py-3 px-4 rounded-2xl space-y-2 sticky top-[-90px]"
+        >
+          <div class="font-bold text-xl">Subscribe to Premium</div>
+          <div class="">
+            Subscribe to unlock new features and if eligible, receive a share of
+            ads revenue.
+          </div>
+          <button class="bg-main-color rounded-full py-2 px-5 font-semibold">
+            Subscribe
+          </button>
+        </div>
+        <div class="bg-right-main py-3 rounded-2xl sticky top-[-45vh]">
+          <p class="font-bold text-xl px-4 my-3">What's happening</p>
+          <div
+            class="space-y-1 px-4 hover:bg-right-hover hover:cursor-pointer pt-1"
+          >
+            <div class="flex justify-between items-end">
+              <div class="flex space-x-1">
+                <p class="font-extralight text-xs opacity-45">Sports</p>
+                <div
+                  class="h-[2px] w-[2px] bg-white opacity-45 mt-2 rounded-full"
+                ></div>
+                <p class="font-extralight text-xs opacity-45">Trending</p>
+              </div>
+              <span class="material-symbols-outlined h-6">more_horiz</span>
+            </div>
+            <div class="space-y-1">
+              <p class="font-semibold">What a WIN</p>
+              <p class="font-extralight text-xs opacity-45 pb-3">28.9k Posts</p>
+            </div>
+          </div>
+          <div
+            class="space-y-1 px-4 hover:bg-right-hover hover:cursor-pointer pt-1"
+          >
+            <div class="flex justify-between items-end">
+              <div class="flex space-x-1">
+                <p class="font-extralight text-xs opacity-45">Trending</p>
+              </div>
+              <span class="material-symbols-outlined h-6">more_horiz</span>
+            </div>
+            <div class="space-y-1">
+              <p class="font-semibold">Chief Minister</p>
+              <p class="font-extralight text-xs opacity-45 pb-3">28.9k Posts</p>
+            </div>
+          </div>
+          <div
+            class="space-y-1 px-4 hover:bg-right-hover hover:cursor-pointer pt-1"
+          >
+            <div class="flex justify-between items-end">
+              <div class="flex space-x-1">
+                <p class="font-extralight text-xs opacity-45">Sports</p>
+                <div
+                  class="h-[2px] w-[2px] bg-white opacity-45 mt-2 rounded-full"
+                ></div>
+                <p class="font-extralight text-xs opacity-45">Trending</p>
+              </div>
+              <span class="material-symbols-outlined h-6">more_horiz</span>
+            </div>
+            <div class="space-y-1">
+              <p class="font-semibold">#tatapower</p>
+              <p class="font-extralight text-xs opacity-45 pb-3">28.9k Posts</p>
+            </div>
+          </div>
+          <div
+            class="space-y-1 px-4 hover:bg-right-hover hover:cursor-pointer pt-1"
+          >
+            <div class="flex justify-between items-end">
+              <div class="flex space-x-1">
+                <p class="font-extralight text-xs opacity-45">Sports</p>
+                <div
+                  class="h-[2px] w-[2px] bg-white opacity-45 mt-2 rounded-full"
+                ></div>
+                <p class="font-extralight text-xs opacity-45">Trending</p>
+              </div>
+              <span class="material-symbols-outlined h-6">more_horiz</span>
+            </div>
+            <div class="space-y-1">
+              <p class="font-semibold">#HanumanFlag</p>
+              <p class="font-extralight text-xs opacity-45 pb-3">28.9k Posts</p>
+            </div>
+          </div>
+          <div
+            class="space-y-1 px-4 hover:bg-right-hover hover:cursor-pointer pt-1"
+          >
+            <div class="flex justify-between items-end">
+              <div class="flex space-x-1">
+                <p class="font-extralight text-xs opacity-45">Sports</p>
+                <div
+                  class="h-[2px] w-[2px] bg-white opacity-45 mt-2 rounded-full"
+                ></div>
+                <p class="font-extralight text-xs opacity-45">Trending</p>
+              </div>
+              <span class="material-symbols-outlined h-6">more_horiz</span>
+            </div>
+            <div class="space-y-1">
+              <p class="font-semibold">KS Bharat</p>
+              <p class="font-extralight text-xs opacity-45 pb-3">28.9k Posts</p>
+            </div>
+          </div>
+          <div
+            class="space-y-1 px-4 hover:bg-right-hover hover:cursor-pointer pt-1"
+          >
+            <p class="text-main-color py-2">Show More</p>
+          </div>
+        </div>
+        <div class="bg-right-main py-3 rounded-2xl sticky top-[37vh]">
+          <p class="font-bold text-xl px-4 my-3">Who to follow</p>
+          <div
+            class="pl-4 py-3 flex space-x-2 hover:cursor-pointer hover:bg-right-hover"
+          >
+            <div class="rounded-full overflow-hidden h-10 w-10 self-center">
+              <img src="./Assets/images.jpg" alt="" />
+            </div>
+            <div class="align-top max-w-40 min-w-40">
+              <p class="font-semibold">Dr.S Jaishankar</p>
+              <p class="font-extralight text-gray-400">@sjaishankar</p>
+            </div>
+            <div
+              class="px-5 py-1 self-center box-border block bg-white font-semibold rounded-full"
+              style="color: black"
+            >
+              follow
+            </div>
+          </div>
+          <div
+            class="pl-4 py-3 flex space-x-2 hover:cursor-pointer hover:bg-right-hover"
+          >
+            <div class="rounded-full overflow-hidden h-10 w-10 self-center">
+              <img src="./Assets/ajit-doval7_61e8fedca59a0.jpg" alt="" />
+            </div>
+            <div class="align-top max-w-40 min-w-40">
+              <p class="font-semibold">NSA Ajit Doval</p>
+              <p class="font-extralight text-gray-400">@ajitkumardoval</p>
+            </div>
+            <div
+              class="px-5 py-1 self-center box-border block bg-white font-semibold rounded-full"
+              style="color: black"
+            >
+              follow
+            </div>
+          </div>
+          <div
+            class="pl-4 py-3 flex space-x-2 hover:cursor-pointer hover:bg-right-hover"
+          >
+            <div class="rounded-full overflow-hidden h-10 w-10 self-center">
+              <img src="./Assets/images (1).jpg" alt="" />
+            </div>
+            <div class="align-top max-w-40 min-w-40">
+              <p class="font-semibold">Rohit Sharma</p>
+              <p class="font-extralight text-gray-400">@ro45</p>
+            </div>
+            <div
+              class="px-5 py-1 self-center box-border block bg-white font-semibold rounded-full"
+              style="color: black"
+            >
+              follow
+            </div>
+          </div>
+          <div
+            class="space-y-1 px-4 hover:bg-right-hover hover:cursor-pointer pt-1"
+          >
+            <p class="text-main-color py-2">Show More</p>
+          </div>
+        </div>
+      </div>
       <footer
-        class="fixed bg-black bottom-0 w-full lg:hidden block border-t-[1px] pt-1 border-gray-700 transition-all duration-1000"
+        class="fixed bg-black bottom-0 w-full lg:hidden block border-t-[1px] pt-1  border-gray-700 transition-all duration-1000"
         id="footer"
       >
         <ul class="flex justify-around pb-1">

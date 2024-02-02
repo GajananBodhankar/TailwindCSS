@@ -8,6 +8,7 @@ module.exports = {
         "side-hover": "rgba(231, 233, 234, 0.1)",
         "right-main": "rgb(22 24 28)",
         "right-hover": "#1d1f23",
+        "icon-hover": "rgb(1 46 76)",
       },
     },
     screens: {

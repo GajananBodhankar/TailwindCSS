@@ -15,20 +15,18 @@ window.addEventListener("scroll", () => {
   if (
     Math.floor(window.scrollY) >= Math.floor(window.innerHeight * (10 / 100))
   ) {
-    header.className =
-      "px-3 flex fixed flex-col top-[-80px] w-full bg-black lg:hidden transition-all duration-1000";
-    footer.style.filter = "brightness(50%) ";
-    footer.style.backgroundColor = "transparent";
+    header.classList.remove("top-0");
+    header.classList.add("top-[-180px]");
+    footer.classList.add("opacity-35");
   } else {
-    header.className =
-      "px-3 py-2 flex flex-col fixed w-full top-0  bg-black lg:hidden transition-all duration-1000";
-    footer.style.filter = "brightness(100%)";
-    footer.style.backgroundColor = "black";
+    header.classList.remove("top-[-180px]");
+    header.classList.add("top-0");
+    footer.classList.remove("opacity-35");
   }
-  console.log(
-    Math.floor(window.scrollY),
-    Math.floor(window.innerHeight * (8 / 100))
-  );
+  //   console.log(
+  //     Math.floor(window.scrollY),
+  //     Math.floor(window.innerHeight * (8 / 100))
+  //   );
 });
 let foryou = document.getElementById("foryou");
 let following = document.getElementById("following");
@@ -93,3 +91,14 @@ whatis.addEventListener("input", (e) => {
     post.classList.add("opacity-55");
   }
 });
+
+// let parentDiv = document.getElementsByClassName("hoverEffect");
+// let hover = document.querySelectorAll(".hoverEffect>span");
+// Array.from(parentDiv).forEach((item, index) => {
+//   item.addEventListener("mouseover", () => {
+//     hover[index].classList.add("bg-blue-300");
+//   });
+//   item.addEventListener('mouseout',()=>{
+//     hover[index].classList.remove("bg-blue-300");
+//   })
+// });

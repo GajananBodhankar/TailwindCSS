@@ -28,6 +28,20 @@
       .animatedUnderline:hover {
         bottom: 1px;
       }
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden; /* Prevent body from scrolling */
+      }
+
+      .scroll-box {
+        width: 50%;
+        height: 100vh; /* Adjust height as needed */
+        overflow-y: auto; /* Enable vertical scrolling */
+        border: 1px solid #ccc;
+        float: left; /* Float the divs to place them side by side */
+        box-sizing: border-box;
+      }
     </style>
   </head>
   <body>
@@ -41,7 +55,26 @@
         <li class="animatedUnderline hover:cursor-pointer">Contact</li>
       </ul>
     </nav>
-    <main>Some content</main>
+    <main>
+      Some content
+      <div class="scroll-box" id="box1">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita
+        dolore distinctio, voluptatum labore tempora reprehenderit nihil qui
+        omnis facere officia nesciunt ab eaque illum aliquid ut dolorum
+        architecto dolor officiis! Velit perspiciatis accusantium maxime
+        incidunt, error, enim corrupti vitae quisquam repudiandae odio tenetur
+        fugiat doloremque rem qui labore voluptatibus exercitationem nostrum
+        aliquam, ullam adipisci eius? Laboriosam nemo illo iure sed.
+        Exercitationem voluptatum hic cupiditate atque dolores beatae. Vitae
+        aperiam ad ipsum ratione ipsam facere libero corrupti amet quia officia
+        iure qui fuga optio quis molestiae, aliquid quaerat facilis sapiente
+        illum saepe quos! Rerum quos, eligendi quia deleniti distinctio officia.
+        Enim?
+      </div>
+      <div class="scroll-box" id="box2">
+        <!-- Content for the second div -->
+      </div>
+    </main>
     <footer>
       <hr class="bg-red-600" />
       <div class="bg-black h-96 pt-2">
