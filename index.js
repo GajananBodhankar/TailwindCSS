@@ -16,10 +16,10 @@ window.addEventListener("scroll", () => {
     Math.floor(window.scrollY) >= Math.floor(window.innerHeight * (10 / 100))
   ) {
     header.classList.remove("top-0");
-    header.classList.add("top-[-180px]");
+    header.classList.add("customTop");
     footer.classList.add("opacity-35");
   } else {
-    header.classList.remove("top-[-180px]");
+    header.classList.remove("customTop");
     header.classList.add("top-0");
     footer.classList.remove("opacity-35");
   }
