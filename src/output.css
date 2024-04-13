@@ -580,14 +580,6 @@ video {
   top: 37vh;
 }
 
-.top-20 {
-  top: 5rem;
-}
-
-.top-\[-180px\] {
-  top: -180px;
-}
-
 .z-10 {
   z-index: 10;
 }
@@ -691,10 +683,6 @@ video {
 
 .h-full {
   height: 100%;
-}
-
-.max-h-\[28rem\] {
-  max-height: 28rem;
 }
 
 .max-h-\[35rem\] {
@@ -949,10 +937,6 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.p-1 {
-  padding: 0.25rem;
-}
-
 .p-2 {
   padding: 0.5rem;
 }
@@ -1124,10 +1108,6 @@ video {
   opacity: 0.85;
 }
 
-.opacity-35 {
-  opacity: 0.35;
-}
-
 .invert {
   --tw-invert: invert(100%);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -1213,9 +1193,9 @@ video {
   border-radius: 9999px;
 }
 
-.hover\:bg-main-color:hover {
+.hover\:bg-icon-hover:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(29 155 240 / var(--tw-bg-opacity));
+  background-color: rgb(1 46 76 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-right-hover:hover {
@@ -1227,9 +1207,9 @@ video {
   background-color: rgba(231, 233, 234, 0.1);
 }
 
-.hover\:bg-icon-hover:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(1 46 76 / var(--tw-bg-opacity));
+.hover\:text-green-400:hover {
+  --tw-text-opacity: 1;
+  color: rgb(74 222 128 / var(--tw-text-opacity));
 }
 
 .hover\:text-main-color:hover {
@@ -1237,44 +1217,9 @@ video {
   color: rgb(29 155 240 / var(--tw-text-opacity));
 }
 
-.hover\:text-red-600:hover {
-  --tw-text-opacity: 1;
-  color: rgb(220 38 38 / var(--tw-text-opacity));
-}
-
-.hover\:text-pink-800:hover {
-  --tw-text-opacity: 1;
-  color: rgb(157 23 77 / var(--tw-text-opacity));
-}
-
-.hover\:text-pink-900:hover {
-  --tw-text-opacity: 1;
-  color: rgb(131 24 67 / var(--tw-text-opacity));
-}
-
-.hover\:text-red-700:hover {
-  --tw-text-opacity: 1;
-  color: rgb(185 28 28 / var(--tw-text-opacity));
-}
-
-.hover\:text-red-500:hover {
-  --tw-text-opacity: 1;
-  color: rgb(239 68 68 / var(--tw-text-opacity));
-}
-
 .hover\:text-red-400:hover {
   --tw-text-opacity: 1;
   color: rgb(248 113 113 / var(--tw-text-opacity));
-}
-
-.hover\:text-green-600:hover {
-  --tw-text-opacity: 1;
-  color: rgb(22 163 74 / var(--tw-text-opacity));
-}
-
-.hover\:text-green-400:hover {
-  --tw-text-opacity: 1;
-  color: rgb(74 222 128 / var(--tw-text-opacity));
 }
 
 .hover\:underline:hover {
